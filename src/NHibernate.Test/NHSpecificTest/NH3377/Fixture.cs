@@ -90,7 +90,7 @@ namespace NHibernate.Test.NHSpecificTest.NH3377
 		[Test]
 		public void ShouldBeAbleToCallConvertToBooleanFromStringParameter()
 		{
-			if (Dialect is SQLiteDialect)
+			if (Dialect is SQLiteDialect || Dialect is FirebirdDialect)
 				Assert.Ignore(Dialect.GetType() + " is not supported");
 
 			//NH-3720
